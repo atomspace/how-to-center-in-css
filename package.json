@@ -1,0 +1,15 @@
+{
+	"name": "how-to-center-in-css",
+	"version": "1.0.0",
+	"private": true,
+	"main": "src/index.html",
+	"scripts": {
+	  "start": "browser-sync start --server \"src\" --files \"src\" --open \"external\" --no-notify --no-ghost-mode"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "GPL-3.0",
+	"devDependencies": {
+	  "browser-sync": "2.18.13"
+	}
+ }
