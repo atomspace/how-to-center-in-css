@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>table-layout</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.extra-parent {
+			position: fixed;
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+		.parent {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			background: rgba(0,0,0,0.2);
+			border: none;
+		}
+		.centered {
+			display: inline-block;
+			width: 60%;
+			height: auto;
+		}
+		.link {
+			display: inline-block;
+			white-space: nowrap;
+			padding: 10px 25px;
+			margin: 0 0 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="extra-parent">
+		<div class="parent">
+			<div class="centered">
+					<a class="link" href="text-align.html">Текст в центре</a>
+					<a class="link" href="padding.html">Текст с внутренними отступами</a>
+					<a class="link" href="line-height.html">Высота строки</a>
+					<a class="link" href="table-cell.html">Текст в ячейке таблицы</a>
+					<a class="link" href="block-margin-auto.html">Центрирование колонки</a>
+					<a class="link" href="inline-center.html">Центрирование в строке</a>
+					<a class="link" href="inline-pseudo.html">Трюк c псевдо-элементом</a>
+					<a class="link" href="absolute-margin.html">Оотрицательный `margin`</a>
+					<a class="link" href="absolute-transform.html">Сдвиг с помощью `transofrm`</a>
+					<a class="link" href="absolute-4-sides.html">Указание 4 сторон</a>
+					<a class="link" href="table-layout.html">Табличные стили</a>
+					<a class="link" href="flexbox.html">Flexbox</a>
+					<a class="link" href="grid-layout.html">Grid</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
