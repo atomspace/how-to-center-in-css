@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>table-layout</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.extra-parent {
+			position: fixed;
+			display: table;
+			width: 100%;
+			height: 100%;
+		}
+		.parent {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			background: rgba(0,0,0,0.2);
+		}
+		.centered {
+			display: inline-block;
+			text-align: left;
+			width: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div class="extra-parent">
+		<div class="parent">
+			<div class="centered modal-window">The gyroscope rotation vector sensor is the output of a software/hardware-based sensor fusion solution which uses the accelerometer and gyroscope to compute the orientation of the device. In this sensor, the pitch and roll equivalent representations are free of drift while the azimuth equivalent component is allowed to drift due to the absence of the magnetic sensor. The gyroscope rotation vector sensor represents the orientation of the device as a combination of an angle and an axis on which the device has rotated through a specific angle around an axis (X, Y, or Z).</div>
+		</div>
+	</div>
+</body>
+</html>

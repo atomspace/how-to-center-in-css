@@ -1,6 +1,4 @@
-# how-to-center-in-css
-
-Набор техник центрирования на CSS
+# Техники центрирования на CSS
 
 ## 1. Центрирование текстового содержимого
 
@@ -57,6 +55,7 @@
 - может комбинироваться с вариантами 1.1 и 1.2 для горизонтального центрирования
 - вертикальный центр высчитывается автоматически
 - ограничение: содержимое может быть только строчным
+- если используется `box-sizing: border-box`, то присутствие `border` может повлиять на расчёт величины высоты строки
 
 **Стили**
 ```css
@@ -153,7 +152,7 @@
 
 ## 4. Абсолютное позиционирование и сдвиг с помощью `transofrm`
 
-- заданы ширина и высота
+- не обязательно задавать ширину и высоту
 - может размываться текст
 - работает как `position: absolute`, так и с `position: relative`
 
@@ -162,7 +161,7 @@
 .centered {
    position: absolute;
    width: 600px;
-   height: 300px;
+   height: auto; /*optional*/
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
@@ -191,7 +190,34 @@
 
 ### [Демо: absolute-4-sides.html](./src/absolute-4-sides.html)
 
-## 6. Центрирование табличной ячейки
+## 6. Центрирование с помощью табличных стилей
+
+- не обязательно задавать ширину и высоту
+- нужно использовать дополнительную обёртку
+- `text-align` наследуется дочерними элементами, поэтому надо его перекрывать
+
+**Стили**
+```css
+.extra-parent {
+  position: fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.parent {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.centered {
+  display: inline-block;
+  text-align: left;  /*redefine*/
+  width: 600px; /*optional*/
+  height: auto; /*optional*/
+}
+```
+
+### [Демо: table-layout.html](./src/table-layout.html)
 
 ## 7. Flexbox 
 
@@ -218,7 +244,7 @@
 
 ### [Демо: flexbox.html](./src/flexbox.html)
 
-## 7. Grid Layout 
+## 7. Grid 
 
 - не обязательно задавать ширину и высоту
 - можно центрировать несколько элементов рядом, но надо выбирать в каком направлении: по вертикали или горизонтали
@@ -239,7 +265,8 @@
 
 ### [Демо: grid-layout.html](./src/grid-layout.html)
 
-## Ссылки
+# Ссылки
+
 - [http://howtocenterincss.com/](http://howtocenterincss.com/)
 - [Вертикальное и горизонтальное выравнивание на CSS. Полное руководство.](https://www.youtube.com/watch?v=-q575iqz9r4)
 - [Центрирование в CSS: полное руководство](http://vavik96.com/centrirovanie-v-css-polnoe-rukovodstvo/)
